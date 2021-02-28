@@ -5,6 +5,8 @@
  */
 package lthdt.chuong02.donglenh;
 
+import java.util.Random;
+
 /**
  *
  * @author ttysa
@@ -26,5 +28,13 @@ public class testFor {
             s2 = s2 + i;
         }
         System.out.println("Tong thu hai la " + s2);
+        
+        //Sinh ngau nhien n so nguyen
+        Random rnd = new Random();
+        int x;
+        for (int i = 0; i < 10; i++) {
+            x = rnd.nextInt(101);
+            System.out.println(x);
+        }
     }
 }
