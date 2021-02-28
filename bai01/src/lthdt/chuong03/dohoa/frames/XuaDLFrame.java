@@ -45,7 +45,7 @@ public class XuaDLFrame extends javax.swing.JInternalFrame {
         );
         pnPanelLayout.setVerticalGroup(
             pnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 442, Short.MAX_VALUE)
+            .addGap(0, 435, Short.MAX_VALUE)
         );
 
         btnVe.setText("Ve mang 1 chieu ra man hinh");
@@ -74,9 +74,9 @@ public class XuaDLFrame extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(pnPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(btnVe)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -95,8 +95,10 @@ public class XuaDLFrame extends javax.swing.JInternalFrame {
             a[i] = rnd.nextInt(maxY);
         }
         int beginX = 0, beginY = 0;
+        gr.clearRect(0, 0, maxX, maxY);
         for(int i = 0; i < n; i++){
-            gr.drawRect(beginX, beginY, step, a[i]);
+//            gr.drawRect(beginX, beginY, step, a[i]);
+            gr.drawRect(beginX, maxY - a[i], step, a[i]);
             beginX += step;
         }
         
